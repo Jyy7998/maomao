@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leimao Reader · Source Packs</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 28px 18px 64px; background: #f6f7f9; color: #1f2328;
+         font: 15px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 26px; }
+  .sub { margin: 0 0 24px; color: #59636e; }
+  .total { font-weight: 600; color: #1f2328; }
+  h2.sec { margin: 30px 0 12px; font-size: 15px; color: #59636e; font-weight: 600; }
+  h2.sec span { font-weight: 400; }
+  .card { background: #fff; border: 1px solid #d8dee4; border-radius: 10px;
+           padding: 16px 18px; margin-bottom: 14px; }
+  .card.hi { border-color: #9dc0ee; box-shadow: 0 0 0 3px #eaf2fd; }
+  .card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .card h2 { margin: 0; font-size: 17px; }
+  .badge { margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #eef1f4;
+            color: #59636e; font-size: 12px; font-weight: 500; vertical-align: 2px; }
+  .file { margin: 3px 0 0; color: #6e7781; font-size: 12.5px; font-family: ui-monospace, Consolas, monospace; }
+  .count { font-size: 22px; font-weight: 700; color: #d1242f; white-space: nowrap; }
+  .count small { margin-left: 3px; font-size: 12px; font-weight: 400; color: #6e7781; }
+  .url { display: flex; gap: 8px; margin-top: 12px; }
+  .url code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; padding: 7px 10px;
+               background: #f6f8fa; border: 1px solid #d8dee4; border-radius: 6px;
+               font: 12.5px/1.5 ui-monospace, Consolas, monospace; }
+  .hint { margin: 10px 0 0; color: #59636e; font-size: 12.5px; }
+  .hint code { background: #f6f8fa; border-radius: 4px; padding: 1px 4px;
+                font: 12px/1.5 ui-monospace, Consolas, monospace; }
+  button { padding: 7px 14px; border: 1px solid #d0d7de; border-radius: 6px; background: #f6f8fa;
+            cursor: pointer; font-size: 13px; color: #1f2328; }
+  button:hover { background: #eef1f4; }
+  .note { background: #fff8e5; border: 1px solid #f0d9a0; border-radius: 8px;
+           padding: 12px 14px; margin: 14px 0 4px; font-size: 13px; color: #4d3c12; }
+  .note b { color: #1f2328; }
+  footer { margin-top: 30px; color: #6e7781; font-size: 12.5px; }
+  footer p { margin: 5px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Leimao Reader &middot; Source Packs</h1>
+  <p class="sub"><span class="total">177</span> sources in total. A <b>single link</b> imports all of them
+    (app v1.5.6.0+), or pick a smaller bundle by type.</p>
+
+  <section class="card hi">
+    <header>
+      <div>
+        <h2>Import everything with one link<span class="badge">pack manifest</span></h2>
+        <p class="file">all.json &middot; requires app v1.5.6.0+</p>
+      </div>
+      <div class="count">177<small>sources</small></div>
+    </header>
+    <div class="url"><code id="uall-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/all.json</code>
+      <button onclick="cp('uall-json', this)">Copy</button></div>
+    <p class="hint">The manifest points at <code>legado-all.json</code>, <code>video-all.json</code> and
+      <code>venera/index.json</code>. The app downloads each one, merges novel &middot; comic &middot; video &middot;
+      Venera into a single checklist, and imports them all after one confirmation.
+      Older app versions do not understand this format &mdash; use the three bundle links below instead.</p>
+  </section>
+
+  <h2 class="sec">Bundles <span>&middot; three links covering all 177 sources (for older apps)</span></h2>
+  <section class="card hi">
+    <header>
+      <div>
+        <h2>Novels + comics<span class="badge">legado book sources</span></h2>
+        <p class="file">legado-all.json</p>
+      </div>
+      <div class="count">80<small>sources</small></div>
+    </header>
+    <div class="url"><code id="ulegado-all-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/legado-all.json</code>
+      <button onclick="cp('ulegado-all-json', this)">Copy</button></div>
+  </section>
+  <section class="card hi">
+    <header>
+      <div>
+        <h2>Video<span class="badge">MoonTV collector</span></h2>
+        <p class="file">video-all.json</p>
+      </div>
+      <div class="count">64<small>sources</small></div>
+    </header>
+    <div class="url"><code id="uvideo-all-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/video-all.json</code>
+      <button onclick="cp('uvideo-all-json', this)">Copy</button></div>
+  </section>
+  <section class="card hi">
+    <header>
+      <div>
+        <h2>Comics<span class="badge">Venera sources</span></h2>
+        <p class="file">venera/index.json</p>
+      </div>
+      <div class="count">33<small>sources</small></div>
+    </header>
+    <div class="url"><code id="uvenera-index-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/venera/index.json</code>
+      <button onclick="cp('uvenera-index-json', this)">Copy</button></div>
+  </section>
+
+  <div class="note">
+    <b>Why three links used to be the minimum?</b> Importing is &ldquo;download &rarr; detect format &rarr; import&rdquo;,
+    and one file can only hold one format (legado book source array / MoonTV collector config / Venera source
+    index). The three structures are mutually incompatible. Novel and comic legado packs can be merged, and the
+    two video packs share a format, but Venera runs its own JS sources and cannot coexist with the others.
+    Since v1.5.6.0 the app understands the <code>leimaoPack</code> manifest (<code>all.json</code>), which handles
+    multi-file download and merging, so one link is enough.
+  </div>
+
+  <h2 class="sec">By type <span>&middot; split by content type</span></h2>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Novels<span class="badge">legado book sources</span></h2>
+        <p class="file">novel.json</p>
+      </div>
+      <div class="count">69<small>sources</small></div>
+    </header>
+    <div class="url"><code id="unovel-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/novel.json</code>
+      <button onclick="cp('unovel-json', this)">Copy</button></div>
+  </section>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Comics<span class="badge">legado book sources</span></h2>
+        <p class="file">comic-legado.json</p>
+      </div>
+      <div class="count">11<small>sources</small></div>
+    </header>
+    <div class="url"><code id="ucomic-legado-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/comic-legado.json</code>
+      <button onclick="cp('ucomic-legado-json', this)">Copy</button></div>
+  </section>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Comics<span class="badge">Venera sources</span></h2>
+        <p class="file">venera/index.json</p>
+      </div>
+      <div class="count">33<small>sources</small></div>
+    </header>
+    <div class="url"><code id="uvenera-index-json2">https://raw.githubusercontent.com/Jyy7998/maomao/main/venera/index.json</code>
+      <button onclick="cp('uvenera-index-json2', this)">Copy</button></div>
+  </section>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Video<span class="badge">MoonTV collector</span></h2>
+        <p class="file">video.json</p>
+      </div>
+      <div class="count">36<small>sources</small></div>
+    </header>
+    <div class="url"><code id="uvideo-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/video.json</code>
+      <button onclick="cp('uvideo-json', this)">Copy</button></div>
+  </section>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Video &middot; adult<span class="badge">MoonTV collector</span></h2>
+        <p class="file">video-18.json</p>
+      </div>
+      <div class="count">28<small>sources</small></div>
+    </header>
+    <div class="url"><code id="uvideo-18-json">https://raw.githubusercontent.com/Jyy7998/maomao/main/video-18.json</code>
+      <button onclick="cp('uvideo-18-json', this)">Copy</button></div>
+  </section>
+
+  <h2 class="sec">LeimaoTV <span>&middot; live &amp; video subscriptions</span></h2>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Live TV<span class="badge">aggregated playlist</span></h2>
+        <p class="file">tv/live.m3u</p>
+      </div>
+    </header>
+    <div class="url"><code id="utv-live">https://raw.githubusercontent.com/Jyy7998/maomao/main/tv/live.m3u</code>
+      <button onclick="cp('utv-live', this)">Copy</button></div>
+  </section>
+  <section class="card">
+    <header>
+      <div>
+        <h2>Video collection<span class="badge">aggregated playlist</span></h2>
+        <p class="file">tv/platforms.m3u</p>
+      </div>
+    </header>
+    <div class="url"><code id="utv-platforms">https://raw.githubusercontent.com/Jyy7998/maomao/main/tv/platforms.m3u</code>
+      <button onclick="cp('utv-platforms', this)">Copy</button></div>
+  </section>
+
+  <footer>
+    <p>To import: app &rarr; Sources &rarr; + (top right) &rarr; paste any link above &rarr; download &amp; import &rarr; tick the sources you want.</p>
+    <p>Bundles and type packs are separate files with separate links &mdash; importing both stores two copies, so pick one.</p>
+    <p>This page only distributes source definitions and hosts no content. Third-party sites may go offline at any time; dead sources can be removed in the app.</p>
+  </footer>
+</div>
+<script>
+function cp(id, btn) {
+  var t = document.getElementById(id).textContent, o = btn.textContent;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject())
+    .then(function () { btn.textContent = 'Copied'; })
+    .catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById(id));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      document.execCommand('copy'); s.removeAllRanges(); btn.textContent = 'Copied';
+    })
+    .then(function () { setTimeout(function () { btn.textContent = o; }, 1500); });
+}
+</script>
+</body>
+</html>

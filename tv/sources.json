@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "type": "LIVE",
+      "name": "IPTV4 · vbskycn",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt",
+      "enabled": true
+    },
+    {
+      "type": "LIVE",
+      "name": "CCSH · 综合直播",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.txt",
+      "enabled": true
+    },
+    {
+      "type": "LIVE",
+      "name": "IPTV6 · vbskycn（IPv6）",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt",
+      "enabled": false
+    },
+    {
+      "type": "LIVE",
+      "name": "iptv-org · 中文频道",
+      "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
+      "enabled": true
+    },
+    {
+      "type": "LIVE",
+      "name": "CCSH · 直播平台（独立）",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live_platforms.m3u",
+      "enabled": true
+    },
+    {
+      "type": "LIVE",
+      "name": "成都/四川电信 · IPTV",
+      "url": "https://iptv.zsdc.eu.org/home/iptv.m3u8",
+      "enabled": true
+    },
+    {
+      "type": "VOD",
+      "name": "jin18 · 影视（MoonTV）",
+      "url": "https://raw.githubusercontent.com/hafrey1/LunaTV-config/refs/heads/main/jin18.txt",
+      "enabled": true,
+      "format": "moontv"
+    },
+    {
+      "type": "VOD",
+      "name": "LunaTV · 影视（69 站）",
+      "url": "https://raw.githubusercontent.com/hafrey1/LunaTV-config/refs/heads/main/LunaTV-config.txt",
+      "enabled": false,
+      "format": "moontv"
+    }
+  ]
+}

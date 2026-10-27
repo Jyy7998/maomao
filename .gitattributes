@@ -1,0 +1,2 @@
+# Distribution mirror: keep every file byte-for-byte, no newline conversion.
+* -text
